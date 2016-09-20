@@ -54,6 +54,8 @@ public class PersonalDetailsDialog extends Composite{
 		name = new Text(this, SWT.BORDER);
 		GridData nameGd = new GridData();
 		nameGd.horizontalSpan = 2;
+		nameGd.horizontalAlignment = GridData.FILL;
+		nameGd.grabExcessHorizontalSpace = true;
 		name.setLayoutData(nameGd);
 		
 		sexLabel = new Label(this, SWT.BORDER);
@@ -61,7 +63,9 @@ public class PersonalDetailsDialog extends Composite{
 
 		GridData sexGd = new GridData();
 		sexGd.horizontalSpan = 2;
-		sex = new Combo(this, SWT.NONE);
+		sexGd.horizontalAlignment = GridData.FILL;
+		sexGd.grabExcessHorizontalSpace = true;
+		sex = new Combo(this, SWT.READ_ONLY);
 		sex.setItems(new String[] {
 			"MALE",
 			"FEMALE"
